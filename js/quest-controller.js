@@ -1,11 +1,7 @@
 "use strict"
-
-// TODO: Add bootstrap modal
-
 var gLastRes = null
 
 $(init)
-// $(document).ready(init)
 $(".btn-start").on('click', onStartGuessing)
 $(".btn-yes").on('click', { ans: "yes" }, onUserResponse)
 $(".btn-no").on('click', { ans: "no" }, onUserResponse)
@@ -41,7 +37,7 @@ function onUserResponse(ev) {
     }
   } else {
     gLastRes = res
-    moveToNextQuest(gLastRes) // yes||no
+    moveToNextQuest(gLastRes) 
     renderQuest()
   }
 }
